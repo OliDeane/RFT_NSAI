@@ -1,0 +1,9 @@
+,shape,color,position
+0,rectangle,yellow,"(23, 24)"
+1,circle,orange,"(199, 24)"
+2,rectangle,orange,"(159, 24)"
+3,circle,orange,"(199, 176)"
+4,circle,orange,"(63, 24)"
+5,circle,yellow,"(23, 176)"
+6,circle,yellow,"(63, 176)"
+7,circle,yellow,"(159, 176)"
