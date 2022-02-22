@@ -9,7 +9,8 @@ class DSL():
         # Value to Attribute Converter
         self.val2attr = {'shape': ['circle', 'rectangle'], 'color': ['red', 'green', 'blue', 'orange', 'gray', 'yellow']}
         self.get_attr = lambda x: [k for k, v in self.val2attr.items() if x in v][0]
-        
+        self.ans2str = {0: 'Top Left', 1: 'Top Right', 2:'Bottom Left', 3:'Bottom Right'}
+
         # String to Function
         self.str2func = {'filter_different_shape': self.filter_different_shape, 
                          'filter_different_color': self.filter_different_color, 
@@ -97,12 +98,10 @@ class ProgramExecutor(DSL):
 
             if prev_out is None:
                 prev_out = self.func_executor(func, self.scene)
-                print(prev_out, func)
-                print('-----------------------------')
+
             else:
                 prev_out = self.func_executor(func, prev_out)
-                print(prev_out, func)
-                print('----------')
 
 
-        return prev_out
+        
+        return self.ans2str[prev_out]
